@@ -9,5 +9,9 @@ let SongSchema =  new Schema({
   genre: { type: Schema.Types.ObjectId, ref: 'Genre' },
 })
 
+SongSchema.virtual(()=> {
+  return 'catalog/song/' + this._id
+})
+
 
 module.exports = mongoose.model('Song', SongSchema);
