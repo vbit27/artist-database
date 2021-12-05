@@ -8,4 +8,6 @@ router.post('/artist/create', artist_controller.artist_create_post);
 
 router.get('/artist/:id', artist_controller.artist_detail);
 
+router.get('/artists', artist_controller.artist_list);
+
 module.exports = router;
