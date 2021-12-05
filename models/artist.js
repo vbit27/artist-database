@@ -8,11 +8,11 @@ let ArtistSchema = new Schema({
   date_of_birth: { type: Date },
 });
 
-ArtistSchema.virtual('name').get(() => {
+ArtistSchema.virtual('name').get(function () {
   return this.first_name + ' ' + this.family_name;
 });
 
-ArtistSchema.virtual('url').get(() => {
+ArtistSchema.virtual('url').get(function () {
   return 'catalog/artist/' + this._id;
 });
 

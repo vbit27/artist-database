@@ -18,8 +18,9 @@ exports.artist_detail = (req, res) => {
 
   Artist.findById(id)
     .then((result) => {
-      console.log(result);
-      res.render('details_artist', { data: result });
+      res.render('details_artist', {
+        data: result.toJSON({ virtuals: true }),
+      });
     })
     .catch((err) => {
       console.log(err);
