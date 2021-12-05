@@ -6,7 +6,7 @@
   </head>
   <body>
     <% if (data.length > 0) { %> <% data.forEach(artist => { %>
-    <a class="single" href="/artist/<%= artist._id %>">
+    <a class="single" href="/catalog/artist/<%= artist._id %>">
       <h2 class="title"><%= artist.first_name %></h2>
       <p class="snippet"><%= artist.date_of_birth %></p>
     </a>

@@ -19,7 +19,7 @@ exports.artist_detail = (req, res) => {
   Artist.findById(id)
     .then((result) => {
       res.render('artist_details', {
-        data: result.toJSON({ virtuals: true }),
+        data: result,
       });
     })
     .catch((err) => {
