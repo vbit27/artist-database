@@ -12,13 +12,9 @@
         <label for="surname">Year:</label>
         <input type="date" id="surname" name="year" required />
         <label for="artist">Artist:</label>
-        <input type="text" id="artist" name="artist" required />
-        <label for="artist">Genre:</label>
-        <input type="text" id="genre" name="genre" required />
-        <label for="artist">Artist:</label>
         <select name="artist" id="artist">
           <% data.map(artist => { %>
-          <option value="Dsadas"><%= artist.name%></option>
+          <option value=<%= artist._id%>><%= artist.name%></option>
           <%})%>
         </select>
         <button>Submit</button>
